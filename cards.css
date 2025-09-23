@@ -56,10 +56,10 @@
 }
 
 /* Jednotlivé obrázky */
-.card-relax::before { background-image: url('images/relax.jpg'); }
-.card-thai::before   { background-image: url('images/thai.jpg'); }
-.card-sports::before { background-image: url('images/sport.jpg'); }
-.card-aroma::before  { background-image: url('images/aroma.jpg'); }
+.card-relax::before { background-image: url('relax.jpg'); }
+.card-thai::before   { background-image: url('thai.jpg'); }
+.card-sports::before { background-image: url('sport.jpg'); }
+.card-aroma::before  { background-image: url('aroma.jpg'); }
 
 /* Nadpis */
 .price-card h3 {

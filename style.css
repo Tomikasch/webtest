@@ -106,13 +106,13 @@ nav {
 }
 
 @keyframes heroSlideshow {
-  0%   { background-image: url("images/img1.jpg"); }
-  16%  { background-image: url("images/img2.jpg"); }
-  33%  { background-image: url("images/img3.jpg"); }
-  50%  { background-image: url("images/img4.jpg"); }
-  66%  { background-image: url("images/img5.jpg"); }
-  83%  { background-image: url("images/leksi.jpg"); }
-  100% { background-image: url("images/img1.jpg"); }
+  0%   { background-image: url("img1.jpg"); }
+  16%  { background-image: url("img2.jpg"); }
+  33%  { background-image: url("img3.jpg"); }
+  50%  { background-image: url("img4.jpg"); }
+  66%  { background-image: url("img5.jpg"); }
+  83%  { background-image: url("leksi.jpg"); }
+  100% { background-image: url("img1.jpg"); }
 }
 
 /* overlay kvůli čitelnosti textu */
