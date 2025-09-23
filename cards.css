@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+/* Mobilní a menší zařízení */
+@media (max-width: 768px) {
+  .prices-grid {
+    display: grid;                 /* místo flexu použijeme grid */
+    grid-template-columns: 1fr;    /* jen 1 karta na řádek */
+    gap: 1.5rem;
+    height: auto;                  /* výška podle obsahu */
+    padding: 1rem;
+  }
+  
 .price-card {
   position: relative;
   color: #fff;
