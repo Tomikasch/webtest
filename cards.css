@@ -1,0 +1,138 @@
+.prices-grid {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  height: 85vh;
+  box-sizing: border-box;
+}
+
+.price-card {
+  position: relative;
+  color: #fff;
+  flex: 1;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Obrázkové pozadí */
+.price-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* více viditelné než 0.4 */
+  z-index: 0;
+}
+
+/* Tmavý overlay pro lepší čitelnost textu */
+.price-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* tmavší overlay */
+  z-index: 0;
+}
+
+.price-card * {
+  position: relative;
+  z-index: 1; /* text nad obrázkem a overlay */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* silnější stín */
+}
+
+/* Hover efekt */
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Jednotlivé obrázky */
+.card-relax::before { background-image: url('images/relax.jpg'); }
+.card-thai::before   { background-image: url('images/thai.jpg'); }
+.card-sports::before { background-image: url('images/sport.jpg'); }
+.card-aroma::before  { background-image: url('images/aroma.jpg'); }
+
+/* Nadpis */
+.price-card h3 {
+  font-size: 2rem; /* větší */
+  color: #fff;     /* bílý nadpis */
+  margin-bottom: 1rem;
+}
+
+/* Délka trvání */
+.price-card .duration {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  background: rgba(0,0,0,0.4); /* poloprůhledný box */
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Cena */
+.price-card .price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffd700; /* zlatá pro kontrast */
+  margin-bottom: 1rem;
+  background: rgba(0,0,0,0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Popisek */
+.price-card .desc {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.5;
+  background: rgba(0,0,0,0.3); /* poloprůhledný box pod textem */
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+
+/* GRID karet*/
+
+.card-header {
+  flex: 1; /* zabírá stejný prostor ve všech kartách */
+}
+
+.card-body {
+  flex: 2; /* popisek zabírá více místa */
+  display: flex;
+  align-items: center; /* vertikálně zarovná text uprostřed */
+}
+
+.card-footer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-card .duration,
+.price-card .price {
+  background: rgba(0,0,0,0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.price-card .desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  background: rgba(0,0,0,0.3);
+  padding: 0.5rem;
+  border-radius: 10px;
+}

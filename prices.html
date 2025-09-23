@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massages</title>
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+    <main class="prices-container">
+        <section class="prices-grid">
+        <div class="price-card card-relax">
+            <div class="card-header">
+            <h3>Relaxing Massage</h3>
+            </div>
+            <div class="card-body">
+            <p class="desc">
+                A gentle, full-body massage designed to reduce stress and tension. Perfect for unwinding after a long day, leaving your muscles relaxed and your mind calm.
+            </p>
+            </div>
+            <div class="card-footer">
+            <p class="duration">60 min</p>
+            <p class="price">32 €</p>
+            </div>
+        </div>
+
+        <div class="price-card card-thai">
+            <div class="card-header">
+            <h3>Thai Massage</h3>
+            </div>
+            <div class="card-body">
+            <p class="desc">
+                Traditional Thai massage combines stretching, acupressure, and rhythmic movements to improve flexibility, stimulate energy flow, and release tension.
+            </p>
+            </div>
+            <div class="card-footer">
+            <p class="duration">60 min</p>
+            <p class="price">36 €</p>
+            </div>
+        </div>
+
+        <div class="price-card card-sports">
+            <div class="card-header">
+            <h3>Sports Massage</h3>
+            </div>
+            <div class="card-body">
+            <p class="desc">
+                Designed for athletes and active individuals, this massage targets sore muscles, speeds up recovery, and helps prevent injuries.
+            </p>
+            </div>
+            <div class="card-footer">
+            <p class="duration">45 min</p>
+            <p class="price">30 €</p>
+            </div>
+        </div>
+
+        <div class="price-card card-aroma">
+            <div class="card-header">
+            <h3>Aroma Massage</h3>
+            </div>
+            <div class="card-body">
+            <p class="desc">
+                Relaxing massage with essential oils that soothe both body and mind. Enhances circulation, relieves tension, and promotes a feeling of deep relaxation.
+            </p>
+            </div>
+            <div class="card-footer">
+            <p class="duration">60 min</p>
+            <p class="price">38 €</p>
+            </div>
+        </div>
+        </section>
+    </main>
+    <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massages</title>
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>FLeksi Massages</h1>
+            <p>Your body deserves care - enjoy professional massages in a calming atmosphere.</p>
+            <a href="reservation.html" class="btn-cta">Online reservation</a>
+        </div>
+    </main>
+    <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
