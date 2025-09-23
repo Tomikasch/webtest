@@ -1,21 +1,28 @@
+/* === Mobile default === */
 .prices-grid {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  height: 85vh;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;  /* 1 karta na řádek */
+  gap: 1.5rem;
+  padding: 1rem;
+  height: auto;
 }
 
-/* Mobilní a menší zařízení */
-@media (max-width: 768px) {
+/* === Tablet === */
+@media (min-width: 768px) {
   .prices-grid {
-    display: grid;                 /* místo flexu použijeme grid */
-    grid-template-columns: 1fr;    /* jen 1 karta na řádek */
-    gap: 1.5rem;
-    height: auto;                  /* výška podle obsahu */
-    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 karty vedle sebe */
+    gap: 2rem;
+    padding: 2rem;
   }
-  
+}
+
+/* === Desktop === */
+@media (min-width: 1200px) {
+  .prices-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 karty vedle sebe */
+    height: 85vh;
+  }
+}
 .price-card {
   position: relative;
   color: #fff;
