@@ -17,12 +17,20 @@
             <a href="reservation.html" class="btn-cta">Online reservation</a>
         </div>
     </main>
-    <script>
-        fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
+        <script>
+            fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
+
+            // teprve teď existuje .menu-toggle
+            const toggle = document.querySelector(".menu-toggle");
+            const nav = document.querySelector(".nav--main");
+
+            toggle.addEventListener("click", () => {
+                nav.classList.toggle("active");
+            });
         });
-    </script>
+        </script>
 </body>
 </html>

@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navigace */
+/* === Navigace === */
 nav {
   position: sticky;
   top: 0;
@@ -25,10 +25,18 @@ nav {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   z-index: 1000;
 
-  display: flex;               /* řadí značku a menu vedle sebe */
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
+}
+
+/* Logo */
+.nav--brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f70776;
+  cursor: default;
 }
 
 /* Hlavní seznam */
@@ -36,12 +44,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;                /* mezera mezi položkami */
+  gap: 2rem;
   list-style: none;
   padding: 1rem 2rem;
 }
 
-/* Položky */
+/* Položky menu */
 .nav_item--main a {
   text-decoration: none;
   color: #333;
@@ -51,7 +59,7 @@ nav {
   transition: color 0.3s ease;
 }
 
-/* Hover efekt s podtržením */
+/* Hover efekt */
 .nav_item--main a::after {
   content: "";
   position: absolute;
@@ -59,7 +67,7 @@ nav {
   bottom: -4px;
   width: 100%;
   height: 2px;
-  background: #2ca58d;   /* moderní zeleno-modrá barva */
+  background: #2ca58d;
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: right;
@@ -74,14 +82,67 @@ nav {
   transform-origin: left;
 }
 
-
-.nav--brand {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #f70776;
-  cursor: default;  /* nebo pointer, pokud to bude odkaz */
+/* CTA tlačítko */
+.nav_item--main.btn-cta a {
+  background: #e63946;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
+.nav_item--main.btn-cta a:hover {
+  background: #d62828;
+}
+
+/* Hamburger menu - defaultně skryté na desktopu */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .menu-toggle {
+    display: block; /* viditelné hamburger tlačítko na mobilu */
+    margin-bottom: 0.5rem;
+  }
+
+  .nav--main {
+    display: none; /* skryté defaultně */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    background: #f5f5f5;
+    border-radius: 10px;
+  }
+
+  .nav--main.active {
+    display: flex; /* zobrazené po kliknutí na hamburger */
+  }
+
+  .nav_item--main a {
+    font-size: 1.2rem;
+  }
+
+  .nav_item--main.btn-cta a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* === Hero sekce === */
 .hero {
   height: 90vh;
   display: flex;
@@ -91,8 +152,6 @@ nav {
   color: white;
   position: relative;
   overflow: hidden;
-
-  /* slideshow animace */
   animation: heroSlideshow 25s infinite linear;
   background-size: cover;
   background-position: center;
@@ -125,30 +184,15 @@ nav {
   border-radius: 15px;
   color: #fff;
   text-align: center;
-
-  /* jemný blur efekt pozadí */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-
-  /* stín pro hloubku */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-
-  /* fade-in animace */
   opacity: 0;
   animation: fadeInText 1.5s forwards;
 }
 
 @keyframes fadeInText {
-  to {
-    opacity: 1;
-  }
-}
-/* tmavý overlay, aby text byl čitelný */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  to { opacity: 1; }
 }
 
 .hero-content h1 {
@@ -163,7 +207,7 @@ nav {
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
-
+/* CTA tlačítko */
 .btn-cta {
   display: inline-block;
   background: #e63946;
