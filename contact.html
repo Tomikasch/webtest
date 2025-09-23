@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massages</title>
 </head>
@@ -10,11 +11,36 @@
 
     <div id="nav-placeholder"></div>
 
-    <main class="hero">
-        <div class="hero-content">
-            <h1>FLeksi Massages</h1>
-            <p>Your body deserves care - enjoy professional massages in a calming atmosphere.</p>
-            <a href="reservation.html" class="btn-cta">Online reservation</a>
+    <main id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p class="contact-intro">Do you have a question or would you like to book an appointment? Send us a message:</p>
+        
+        <div class="contact-grid">
+            <!-- Form -->
+            <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Your e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn-cta">Send</button>
+            </form>
+
+            <!-- Info block -->
+            <div class="contact-info">
+            <h3>Our Details</h3>
+            <p><strong>Address:</strong> Main Street 123, Prague</p>
+            <p><strong>Phone:</strong> +420 123 456 789</p>
+            <p><strong>E-mail:</strong> info@mywebsite.com</p>
+            <p><strong>Opening Hours:</strong> Mon–Fri 9:00–18:00</p>
+            </div>
         </div>
     </main>
     <script>
